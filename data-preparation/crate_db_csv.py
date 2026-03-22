@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 
 # ─────────────────────────────────────────────────────────────────
 # STEP 1 — Load raw dataset
@@ -144,6 +145,9 @@ print(f"Tracking rows → CSV flat file (40%): {len(csv_rows)}")
 # ─────────────────────────────────────────────────────────────────
 # STEP 6 — Write the three output files
 # ─────────────────────────────────────────────────────────────────
+os.makedirs('asset', exist_ok=True)
+os.makedirs('source-file', exist_ok=True)
+
 
 # Vessel table — imported into SQL Server
 vessel_df.to_csv('asset/vessel_table.csv', index=False)
