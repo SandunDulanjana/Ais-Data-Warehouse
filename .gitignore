@@ -1,0 +1,34 @@
+# ── Python virtual environment (DO NOT commit — very large) ──
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+
+# ── Large raw dataset files ───────────────────────────────────
+# Comment out any line below if you WANT to commit that file
+dataset/*.csv
+dataset/*.zip
+
+# Keep these small CSV files (they ARE committed)
+!source-file/vessel_table.csv
+!source-file/tracking_source_40pct.csv
+
+# ── SQL Server files ──────────────────────────────────────────
+*.bak
+*.mdf
+*.ldf
+
+# ── SSIS build output ─────────────────────────────────────────
+bin/
+obj/
+
+# ── OS junk ───────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── VS Code settings (optional — remove # to ignore) ─────────
+# .vscode/
