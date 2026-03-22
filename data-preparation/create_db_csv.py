@@ -4,7 +4,7 @@ import os
 # ─────────────────────────────────────────────────────────────────
 # STEP 1 — Load raw dataset
 # ─────────────────────────────────────────────────────────────────
-df = pd.read_csv(r'C:\DWBI_Project\processed_AIS_dataset.csv')         # <── change to your filename
+df = pd.read_csv(r'C:\Users\User\Documents\GitHub\Ais-Data-Warehouse\dataset\primary-dataset\processed_AIS_dataset.csv')         # <── change to your filename
 
 # Normalise all column names
 df.columns = df.columns.str.strip().str.lower()
@@ -145,18 +145,18 @@ print(f"Tracking rows → CSV flat file (40%): {len(csv_rows)}")
 # ─────────────────────────────────────────────────────────────────
 # STEP 6 — Write the three output files
 # ─────────────────────────────────────────────────────────────────
-os.makedirs('asset', exist_ok=True)
-os.makedirs('source-file', exist_ok=True)
+os.makedirs(r'C:\Users\User\Documents\GitHub\Ais-Data-Warehouse\dataset\asset-dataset', exist_ok=True)
+os.makedirs(r'C:\Users\User\Documents\GitHub\Ais-Data-Warehouse\sources', exist_ok=True)
 
 
 # Vessel table — imported into SQL Server
-vessel_df.to_csv('asset/vessel_table.csv', index=False)
+vessel_df.to_csv(r'C:\Users\User\Documents\GitHub\Ais-Data-Warehouse\dataset\asset-dataset\vessel_table.csv', index=False)
 
 # Tracking 60% — imported into SQL Server VesselTracking table
-db_rows.to_csv('asset/tracking_db_60pct.csv', index=False)
+db_rows.to_csv(r'C:\Users\User\Documents\GitHub\Ais-Data-Warehouse\dataset\asset-dataset\tracking_db_60pct.csv', index=False)
 
 # Tracking 40% — kept as SOURCE flat file (SSIS reads this directly)
-csv_rows.to_csv('source-file/tracking_source_40pct.csv', index=False)
+csv_rows.to_csv(r'C:\Users\User\Documents\GitHub\Ais-Data-Warehouse\sources\tracking_source_40pct.csv', index=False)
 
 print("\n=== Output files written to ./ais_source_files/ ===")
 print(f"  vessel_table.csv           {len(vessel_df):>8,} rows   Vessel table in SQL Server")
