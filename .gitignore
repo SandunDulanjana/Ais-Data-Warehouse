@@ -7,14 +7,11 @@ __pycache__/
 *.pyo
 .env
 
-# ── Large raw dataset files ───────────────────────────────────
-# Comment out any line below if you WANT to commit that file
-dataset/*.csv
-dataset/*.zip
-
-# Keep these small CSV files (they ARE committed)
-!source-file/vessel_table.csv
-!source-file/tracking_source_40pct.csv
+# Ignore large data files
+*.csv
+dataset/
+source-file/
+asset/
 
 # ── SQL Server files ──────────────────────────────────────────
 *.bak
