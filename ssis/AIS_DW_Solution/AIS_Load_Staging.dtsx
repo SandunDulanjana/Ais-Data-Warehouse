@@ -1,0 +1,2796 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/23/2026 11:01:00 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-VN0BD62"
+  DTS:CreatorName="DESKTOP-VN0BD62\User"
+  DTS:DTSID="{40A06ECD-29A0-4567-82B2-8BF3C70AFDBA}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1010.2"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="AIS_Load_Staging"
+  DTS:PackageType="5"
+  DTS:VersionBuild="17"
+  DTS:VersionGUID="{3383C4C6-9BCA-4F26-8705-FB49894E0E68}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-VN0BD62\MSSQLSERVER2.AIS_SourceDB.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{73FE46C7-DD69-4089-A8B2-933CFF7A6F8B}"
+      DTS:ObjectName="DESKTOP-VN0BD62\MSSQLSERVER2.AIS_SourceDB.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-VN0BD62\MSSQLSERVER2;User ID=sa;Initial Catalog=AIS_SourceDB;Provider=MSOLEDBSQL.1;Application Name=SSIS-AIS_Load_Staging-{73FE46C7-DD69-4089-A8B2-933CFF7A6F8B}DESKTOP-VN0BD62\MSSQLSERVER2.AIS_SourceDB.sa;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAAden2bq68kWP1lL5+j0SiwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABcyw1AQeLp3zw89295qNVFgzLKcglkMMJ9RM+nXAhhyQAAAAAOgAAAAAIAACAAAAC7S0gmEWn+NvHGBNLGVON+41l8E1KgsLga6XbSpaymEyAAAABYoTNHfd7I5kZ/5vvdtvd8PzURil+ltsKKeUXaKIn/tUAAAADLdIxklEljEPe9A3hYJGVA1EuvBMhaPtnr42iVU6c68AReoNzdXVz+kvR/p+QZtqKxN2nb/JeBpYR1PuAuWlr8</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-VN0BD62\MSSQLSERVER2.AIS_Staging.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{47AC2004-FDDA-4653-B683-BB6A23C7E065}"
+      DTS:ObjectName="DESKTOP-VN0BD62\MSSQLSERVER2.AIS_Staging.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-VN0BD62\MSSQLSERVER2;User ID=sa;Initial Catalog=AIS_Staging;Provider=SQLOLEDB.1;Application Name=SSIS-AIS_Load_Staging-{47AC2004-FDDA-4653-B683-BB6A23C7E065}DESKTOP-VN0BD62\MSSQLSERVER2.AIS_Staging.sa;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAAden2bq68kWP1lL5+j0SiwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAChfgzRYUf7aOFbbhe99jB5421JuOXd6619Yyc0OqKllwAAAAAOgAAAAAIAACAAAAD2MMBPC888rsQkk/0zCN6NTHHBbEllm0FPZzAXPds5rSAAAAAf3lNYnSuZ6QXTN0tE2Ppa2VstdPSLXsdXP+ywVpOwXkAAAADeMJBpyCo8/Bb/hFwiRdKtvuTY71sKJSTcLU42tLWNKjltRBC628lmhSvYJWUqOoCfv5aL63wVTKg/wmf4DoQj</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Extract Vessel Data to Staging"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{D151F90A-68B5-4549-B305-70CEE769B50D}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Extract Vessel Data to Staging"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:EventHandlers>
+        <DTS:EventHandler
+          DTS:refId="Package\Extract Vessel Data to Staging.EventHandlers[OnPreExecute]"
+          DTS:CreationName="OnPreExecute"
+          DTS:DTSID="{BA4DCF6A-FA38-4462-8434-3D3D521AE811}"
+          DTS:EventID="785609424"
+          DTS:EventName="OnPreExecute"
+          DTS:LocaleID="-1">
+          <DTS:Variables>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:Description="The propagate property of the event"
+              DTS:DTSID="{2C359058-F5A8-4F81-B61C-F2881B755FD4}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="System"
+              DTS:ObjectName="Propagate">
+              <DTS:VariableValue
+                DTS:DataType="11">-1</DTS:VariableValue>
+            </DTS:Variable>
+          </DTS:Variables>
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Extract Vessel Data to Staging.EventHandlers[OnPreExecute]\Truncate Vessel Staging Table"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{2B3B8ECE-22FD-40F3-8620-A12EB3DD0137}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Truncate Vessel Staging Table"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{47AC2004-FDDA-4653-B683-BB6A23C7E065}"
+                  SQLTask:SqlStatementSource="TRUNCATE TABLE dbo.StgVessel" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+        </DTS:EventHandler>
+      </DTS:EventHandlers>
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Extract Vessel Data to Staging\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Extract Vessel Data to Staging\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract Vessel Data to Staging\Data Conversion.Inputs[Data Conversion Input].Columns[mmsi]"
+                      cachedDataType="i8"
+                      cachedName="mmsi"
+                      lineageId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].Columns[mmsi]" />
+                    <inputColumn
+                      refId="Package\Extract Vessel Data to Staging\Data Conversion.Inputs[Data Conversion Input].Columns[vessel_name]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="vessel_name"
+                      lineageId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].Columns[vessel_name]" />
+                    <inputColumn
+                      refId="Package\Extract Vessel Data to Staging\Data Conversion.Inputs[Data Conversion Input].Columns[imo]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="imo"
+                      lineageId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].Columns[imo]" />
+                    <inputColumn
+                      refId="Package\Extract Vessel Data to Staging\Data Conversion.Inputs[Data Conversion Input].Columns[call_sign]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="call_sign"
+                      lineageId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].Columns[call_sign]" />
+                    <inputColumn
+                      refId="Package\Extract Vessel Data to Staging\Data Conversion.Inputs[Data Conversion Input].Columns[vessel_type]"
+                      cachedDataType="i4"
+                      cachedName="vessel_type"
+                      lineageId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].Columns[vessel_type]" />
+                    <inputColumn
+                      refId="Package\Extract Vessel Data to Staging\Data Conversion.Inputs[Data Conversion Input].Columns[length]"
+                      cachedDataType="numeric"
+                      cachedName="length"
+                      cachedPrecision="7"
+                      cachedScale="2"
+                      lineageId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].Columns[length]" />
+                    <inputColumn
+                      refId="Package\Extract Vessel Data to Staging\Data Conversion.Inputs[Data Conversion Input].Columns[width]"
+                      cachedDataType="numeric"
+                      cachedName="width"
+                      cachedPrecision="7"
+                      cachedScale="2"
+                      lineageId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].Columns[width]" />
+                    <inputColumn
+                      refId="Package\Extract Vessel Data to Staging\Data Conversion.Inputs[Data Conversion Input].Columns[draft]"
+                      cachedDataType="numeric"
+                      cachedName="draft"
+                      cachedPrecision="5"
+                      cachedScale="2"
+                      lineageId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].Columns[draft]" />
+                    <inputColumn
+                      refId="Package\Extract Vessel Data to Staging\Data Conversion.Inputs[Data Conversion Input].Columns[cargo]"
+                      cachedDataType="i4"
+                      cachedName="cargo"
+                      lineageId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].Columns[cargo]" />
+                    <inputColumn
+                      refId="Package\Extract Vessel Data to Staging\Data Conversion.Inputs[Data Conversion Input].Columns[transceiver_class]"
+                      cachedDataType="wstr"
+                      cachedLength="5"
+                      cachedName="transceiver_class"
+                      lineageId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].Columns[transceiver_class]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract Vessel Data to Staging\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Extract Vessel Data to Staging\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Vessel Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of mmsi]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Extract Vessel Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of mmsi]"
+                      name="Copy of mmsi"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].Columns[mmsi]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Vessel Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of vessel_name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\Extract Vessel Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of vessel_name]"
+                      name="Copy of vessel_name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].Columns[vessel_name]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Vessel Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of imo]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\Extract Vessel Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of imo]"
+                      name="Copy of imo"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].Columns[imo]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Vessel Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of call_sign]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\Extract Vessel Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of call_sign]"
+                      name="Copy of call_sign"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].Columns[call_sign]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Vessel Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of vessel_type]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Extract Vessel Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of vessel_type]"
+                      name="Copy of vessel_type"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].Columns[vessel_type]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Vessel Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of length]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Extract Vessel Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of length]"
+                      name="Copy of length"
+                      precision="7"
+                      scale="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].Columns[length]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Vessel Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of width]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Extract Vessel Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of width]"
+                      name="Copy of width"
+                      precision="7"
+                      scale="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].Columns[width]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Vessel Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of draft]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Extract Vessel Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of draft]"
+                      name="Copy of draft"
+                      precision="5"
+                      scale="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].Columns[draft]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Vessel Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of cargo]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Extract Vessel Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of cargo]"
+                      name="Copy of cargo"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].Columns[cargo]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Vessel Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of transceiver_class]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="5"
+                      lineageId="Package\Extract Vessel Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of transceiver_class]"
+                      name="Copy of transceiver_class"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].Columns[transceiver_class]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Extract Vessel Data to Staging\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Extract Vessel Data to Staging\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Vessel Data to Staging\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Vessel Data to Staging\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Vessel Data to Staging\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Vessel Data to Staging\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract Vessel Data to Staging\Load data to Vessel Staging table"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Load data to Vessel Staging table"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[StgVessel]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Vessel Data to Staging\Load data to Vessel Staging table.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-VN0BD62\MSSQLSERVER2.AIS_Staging.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-VN0BD62\MSSQLSERVER2.AIS_Staging.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extract Vessel Data to Staging\Load data to Vessel Staging table.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract Vessel Data to Staging\Load data to Vessel Staging table.Inputs[OLE DB Destination Input].Columns[Copy of mmsi]"
+                      cachedDataType="i8"
+                      cachedName="Copy of mmsi"
+                      externalMetadataColumnId="Package\Extract Vessel Data to Staging\Load data to Vessel Staging table.Inputs[OLE DB Destination Input].ExternalColumns[mmsi]"
+                      lineageId="Package\Extract Vessel Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of mmsi]" />
+                    <inputColumn
+                      refId="Package\Extract Vessel Data to Staging\Load data to Vessel Staging table.Inputs[OLE DB Destination Input].Columns[Copy of vessel_name]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Copy of vessel_name"
+                      externalMetadataColumnId="Package\Extract Vessel Data to Staging\Load data to Vessel Staging table.Inputs[OLE DB Destination Input].ExternalColumns[vessel_name]"
+                      lineageId="Package\Extract Vessel Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of vessel_name]" />
+                    <inputColumn
+                      refId="Package\Extract Vessel Data to Staging\Load data to Vessel Staging table.Inputs[OLE DB Destination Input].Columns[Copy of imo]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="Copy of imo"
+                      externalMetadataColumnId="Package\Extract Vessel Data to Staging\Load data to Vessel Staging table.Inputs[OLE DB Destination Input].ExternalColumns[imo]"
+                      lineageId="Package\Extract Vessel Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of imo]" />
+                    <inputColumn
+                      refId="Package\Extract Vessel Data to Staging\Load data to Vessel Staging table.Inputs[OLE DB Destination Input].Columns[Copy of call_sign]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="Copy of call_sign"
+                      externalMetadataColumnId="Package\Extract Vessel Data to Staging\Load data to Vessel Staging table.Inputs[OLE DB Destination Input].ExternalColumns[call_sign]"
+                      lineageId="Package\Extract Vessel Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of call_sign]" />
+                    <inputColumn
+                      refId="Package\Extract Vessel Data to Staging\Load data to Vessel Staging table.Inputs[OLE DB Destination Input].Columns[Copy of vessel_type]"
+                      cachedDataType="i4"
+                      cachedName="Copy of vessel_type"
+                      externalMetadataColumnId="Package\Extract Vessel Data to Staging\Load data to Vessel Staging table.Inputs[OLE DB Destination Input].ExternalColumns[vessel_type]"
+                      lineageId="Package\Extract Vessel Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of vessel_type]" />
+                    <inputColumn
+                      refId="Package\Extract Vessel Data to Staging\Load data to Vessel Staging table.Inputs[OLE DB Destination Input].Columns[Copy of length]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of length"
+                      cachedPrecision="7"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Extract Vessel Data to Staging\Load data to Vessel Staging table.Inputs[OLE DB Destination Input].ExternalColumns[length]"
+                      lineageId="Package\Extract Vessel Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of length]" />
+                    <inputColumn
+                      refId="Package\Extract Vessel Data to Staging\Load data to Vessel Staging table.Inputs[OLE DB Destination Input].Columns[Copy of width]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of width"
+                      cachedPrecision="7"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Extract Vessel Data to Staging\Load data to Vessel Staging table.Inputs[OLE DB Destination Input].ExternalColumns[width]"
+                      lineageId="Package\Extract Vessel Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of width]" />
+                    <inputColumn
+                      refId="Package\Extract Vessel Data to Staging\Load data to Vessel Staging table.Inputs[OLE DB Destination Input].Columns[Copy of draft]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of draft"
+                      cachedPrecision="5"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Extract Vessel Data to Staging\Load data to Vessel Staging table.Inputs[OLE DB Destination Input].ExternalColumns[draft]"
+                      lineageId="Package\Extract Vessel Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of draft]" />
+                    <inputColumn
+                      refId="Package\Extract Vessel Data to Staging\Load data to Vessel Staging table.Inputs[OLE DB Destination Input].Columns[Copy of cargo]"
+                      cachedDataType="i4"
+                      cachedName="Copy of cargo"
+                      externalMetadataColumnId="Package\Extract Vessel Data to Staging\Load data to Vessel Staging table.Inputs[OLE DB Destination Input].ExternalColumns[cargo]"
+                      lineageId="Package\Extract Vessel Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of cargo]" />
+                    <inputColumn
+                      refId="Package\Extract Vessel Data to Staging\Load data to Vessel Staging table.Inputs[OLE DB Destination Input].Columns[Copy of transceiver_class]"
+                      cachedDataType="wstr"
+                      cachedLength="5"
+                      cachedName="Copy of transceiver_class"
+                      externalMetadataColumnId="Package\Extract Vessel Data to Staging\Load data to Vessel Staging table.Inputs[OLE DB Destination Input].ExternalColumns[transceiver_class]"
+                      lineageId="Package\Extract Vessel Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of transceiver_class]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract Vessel Data to Staging\Load data to Vessel Staging table.Inputs[OLE DB Destination Input].ExternalColumns[mmsi]"
+                      dataType="i8"
+                      name="mmsi" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Vessel Data to Staging\Load data to Vessel Staging table.Inputs[OLE DB Destination Input].ExternalColumns[vessel_name]"
+                      dataType="wstr"
+                      length="100"
+                      name="vessel_name" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Vessel Data to Staging\Load data to Vessel Staging table.Inputs[OLE DB Destination Input].ExternalColumns[imo]"
+                      dataType="wstr"
+                      length="20"
+                      name="imo" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Vessel Data to Staging\Load data to Vessel Staging table.Inputs[OLE DB Destination Input].ExternalColumns[call_sign]"
+                      dataType="wstr"
+                      length="20"
+                      name="call_sign" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Vessel Data to Staging\Load data to Vessel Staging table.Inputs[OLE DB Destination Input].ExternalColumns[vessel_type]"
+                      dataType="i4"
+                      name="vessel_type" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Vessel Data to Staging\Load data to Vessel Staging table.Inputs[OLE DB Destination Input].ExternalColumns[length]"
+                      dataType="numeric"
+                      name="length"
+                      precision="7"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Vessel Data to Staging\Load data to Vessel Staging table.Inputs[OLE DB Destination Input].ExternalColumns[width]"
+                      dataType="numeric"
+                      name="width"
+                      precision="7"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Vessel Data to Staging\Load data to Vessel Staging table.Inputs[OLE DB Destination Input].ExternalColumns[draft]"
+                      dataType="numeric"
+                      name="draft"
+                      precision="5"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Vessel Data to Staging\Load data to Vessel Staging table.Inputs[OLE DB Destination Input].ExternalColumns[cargo]"
+                      dataType="i4"
+                      name="cargo" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Vessel Data to Staging\Load data to Vessel Staging table.Inputs[OLE DB Destination Input].ExternalColumns[transceiver_class]"
+                      dataType="wstr"
+                      length="5"
+                      name="transceiver_class" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract Vessel Data to Staging\Load data to Vessel Staging table.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Extract Vessel Data to Staging\Load data to Vessel Staging table.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Vessel Data to Staging\Load data to Vessel Staging table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Vessel Data to Staging\Load data to Vessel Staging table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Vessel Data to Staging\Load data to Vessel Staging table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Vessel Data to Staging\Load data to Vessel Staging table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Vessel Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Vessel]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-VN0BD62\MSSQLSERVER2.AIS_SourceDB.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-VN0BD62\MSSQLSERVER2.AIS_SourceDB.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].Columns[mmsi]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].ExternalColumns[mmsi]"
+                      lineageId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].Columns[mmsi]"
+                      name="mmsi"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].Columns[vessel_name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].ExternalColumns[vessel_name]"
+                      length="100"
+                      lineageId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].Columns[vessel_name]"
+                      name="vessel_name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].Columns[imo]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].ExternalColumns[imo]"
+                      length="20"
+                      lineageId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].Columns[imo]"
+                      name="imo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].Columns[call_sign]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].ExternalColumns[call_sign]"
+                      length="20"
+                      lineageId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].Columns[call_sign]"
+                      name="call_sign"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].Columns[vessel_type]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].ExternalColumns[vessel_type]"
+                      lineageId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].Columns[vessel_type]"
+                      name="vessel_type"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].Columns[length]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].ExternalColumns[length]"
+                      lineageId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].Columns[length]"
+                      name="length"
+                      precision="7"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].Columns[width]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].ExternalColumns[width]"
+                      lineageId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].Columns[width]"
+                      name="width"
+                      precision="7"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].Columns[draft]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].ExternalColumns[draft]"
+                      lineageId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].Columns[draft]"
+                      name="draft"
+                      precision="5"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].Columns[cargo]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].ExternalColumns[cargo]"
+                      lineageId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].Columns[cargo]"
+                      name="cargo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].Columns[transceiver_class]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].ExternalColumns[transceiver_class]"
+                      length="5"
+                      lineageId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].Columns[transceiver_class]"
+                      name="transceiver_class"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].ExternalColumns[mmsi]"
+                      dataType="i8"
+                      name="mmsi" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].ExternalColumns[vessel_name]"
+                      dataType="wstr"
+                      length="100"
+                      name="vessel_name" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].ExternalColumns[imo]"
+                      dataType="wstr"
+                      length="20"
+                      name="imo" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].ExternalColumns[call_sign]"
+                      dataType="wstr"
+                      length="20"
+                      name="call_sign" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].ExternalColumns[vessel_type]"
+                      dataType="i4"
+                      name="vessel_type" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].ExternalColumns[length]"
+                      dataType="numeric"
+                      name="length"
+                      precision="7"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].ExternalColumns[width]"
+                      dataType="numeric"
+                      name="width"
+                      precision="7"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].ExternalColumns[draft]"
+                      dataType="numeric"
+                      name="draft"
+                      precision="5"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].ExternalColumns[cargo]"
+                      dataType="i4"
+                      name="cargo" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output].ExternalColumns[transceiver_class]"
+                      dataType="wstr"
+                      length="5"
+                      name="transceiver_class" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Error Output].Columns[mmsi]"
+                      dataType="i8"
+                      lineageId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Error Output].Columns[mmsi]"
+                      name="mmsi" />
+                    <outputColumn
+                      refId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Error Output].Columns[vessel_name]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Error Output].Columns[vessel_name]"
+                      name="vessel_name" />
+                    <outputColumn
+                      refId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Error Output].Columns[imo]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Error Output].Columns[imo]"
+                      name="imo" />
+                    <outputColumn
+                      refId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Error Output].Columns[call_sign]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Error Output].Columns[call_sign]"
+                      name="call_sign" />
+                    <outputColumn
+                      refId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Error Output].Columns[vessel_type]"
+                      dataType="i4"
+                      lineageId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Error Output].Columns[vessel_type]"
+                      name="vessel_type" />
+                    <outputColumn
+                      refId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Error Output].Columns[length]"
+                      dataType="numeric"
+                      lineageId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Error Output].Columns[length]"
+                      name="length"
+                      precision="7"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Error Output].Columns[width]"
+                      dataType="numeric"
+                      lineageId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Error Output].Columns[width]"
+                      name="width"
+                      precision="7"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Error Output].Columns[draft]"
+                      dataType="numeric"
+                      lineageId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Error Output].Columns[draft]"
+                      name="draft"
+                      precision="5"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Error Output].Columns[cargo]"
+                      dataType="i4"
+                      lineageId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Error Output].Columns[cargo]"
+                      name="cargo" />
+                    <outputColumn
+                      refId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Error Output].Columns[transceiver_class]"
+                      dataType="wstr"
+                      length="5"
+                      lineageId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Error Output].Columns[transceiver_class]"
+                      name="transceiver_class" />
+                    <outputColumn
+                      refId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Extract Vessel Data to Staging.Paths[Data Conversion Output]"
+              endId="Package\Extract Vessel Data to Staging\Load data to Vessel Staging table.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Extract Vessel Data to Staging\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Extract Vessel Data to Staging.Paths[OLE DB Source Output]"
+              endId="Package\Extract Vessel Data to Staging\Data Conversion.Inputs[Data Conversion Input]"
+              name="OLE DB Source Output"
+              startId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Extract VesselTracking to staging"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{962E19DF-8340-412F-92E5-39FA027E7A53}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Extract VesselTracking to staging"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:EventHandlers>
+        <DTS:EventHandler
+          DTS:refId="Package\Extract VesselTracking to staging.EventHandlers[OnPreExecute]"
+          DTS:CreationName="OnPreExecute"
+          DTS:DTSID="{578907C2-0FB5-4B89-97C3-42FD5909EBC5}"
+          DTS:EventID="-1039351284"
+          DTS:EventName="OnPreExecute"
+          DTS:LocaleID="-1">
+          <DTS:Variables>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:Description="The propagate property of the event"
+              DTS:DTSID="{342405CC-43E5-47FF-98F8-E0BF2CE31278}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="System"
+              DTS:ObjectName="Propagate">
+              <DTS:VariableValue
+                DTS:DataType="11">-1</DTS:VariableValue>
+            </DTS:Variable>
+          </DTS:Variables>
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Extract VesselTracking to staging.EventHandlers[OnPreExecute]\Truncate VesselTracking Staging Table"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{9E167745-96B8-4A03-944C-C701AEC648B4}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Truncate VesselTracking Staging Table"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{47AC2004-FDDA-4653-B683-BB6A23C7E065}"
+                  SQLTask:SqlStatementSource="truncate table dbo.StgVesselTracking" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+        </DTS:EventHandler>
+      </DTS:EventHandlers>
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Extract VesselTracking to staging\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Extract VesselTracking to staging\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract VesselTracking to staging\Data Conversion.Inputs[Data Conversion Input].Columns[tracking_id]"
+                      cachedDataType="i4"
+                      cachedName="tracking_id"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[tracking_id]" />
+                    <inputColumn
+                      refId="Package\Extract VesselTracking to staging\Data Conversion.Inputs[Data Conversion Input].Columns[mmsi]"
+                      cachedDataType="i8"
+                      cachedName="mmsi"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[mmsi]" />
+                    <inputColumn
+                      refId="Package\Extract VesselTracking to staging\Data Conversion.Inputs[Data Conversion Input].Columns[base_date_time]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="base_date_time"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[base_date_time]" />
+                    <inputColumn
+                      refId="Package\Extract VesselTracking to staging\Data Conversion.Inputs[Data Conversion Input].Columns[latitude]"
+                      cachedDataType="numeric"
+                      cachedName="latitude"
+                      cachedPrecision="10"
+                      cachedScale="6"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[latitude]" />
+                    <inputColumn
+                      refId="Package\Extract VesselTracking to staging\Data Conversion.Inputs[Data Conversion Input].Columns[longitude]"
+                      cachedDataType="numeric"
+                      cachedName="longitude"
+                      cachedPrecision="10"
+                      cachedScale="6"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[longitude]" />
+                    <inputColumn
+                      refId="Package\Extract VesselTracking to staging\Data Conversion.Inputs[Data Conversion Input].Columns[sog]"
+                      cachedDataType="numeric"
+                      cachedName="sog"
+                      cachedPrecision="6"
+                      cachedScale="2"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[sog]" />
+                    <inputColumn
+                      refId="Package\Extract VesselTracking to staging\Data Conversion.Inputs[Data Conversion Input].Columns[cog]"
+                      cachedDataType="numeric"
+                      cachedName="cog"
+                      cachedPrecision="6"
+                      cachedScale="2"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[cog]" />
+                    <inputColumn
+                      refId="Package\Extract VesselTracking to staging\Data Conversion.Inputs[Data Conversion Input].Columns[heading]"
+                      cachedDataType="i2"
+                      cachedName="heading"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[heading]" />
+                    <inputColumn
+                      refId="Package\Extract VesselTracking to staging\Data Conversion.Inputs[Data Conversion Input].Columns[nav_status]"
+                      cachedDataType="wstr"
+                      cachedLength="60"
+                      cachedName="nav_status"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[nav_status]" />
+                    <inputColumn
+                      refId="Package\Extract VesselTracking to staging\Data Conversion.Inputs[Data Conversion Input].Columns[dest_cluster]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="dest_cluster"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[dest_cluster]" />
+                    <inputColumn
+                      refId="Package\Extract VesselTracking to staging\Data Conversion.Inputs[Data Conversion Input].Columns[dest_latitude]"
+                      cachedDataType="numeric"
+                      cachedName="dest_latitude"
+                      cachedPrecision="10"
+                      cachedScale="6"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[dest_latitude]" />
+                    <inputColumn
+                      refId="Package\Extract VesselTracking to staging\Data Conversion.Inputs[Data Conversion Input].Columns[dest_longitude]"
+                      cachedDataType="numeric"
+                      cachedName="dest_longitude"
+                      cachedPrecision="10"
+                      cachedScale="6"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[dest_longitude]" />
+                    <inputColumn
+                      refId="Package\Extract VesselTracking to staging\Data Conversion.Inputs[Data Conversion Input].Columns[dist_km]"
+                      cachedDataType="numeric"
+                      cachedName="dist_km"
+                      cachedPrecision="10"
+                      cachedScale="3"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[dist_km]" />
+                    <inputColumn
+                      refId="Package\Extract VesselTracking to staging\Data Conversion.Inputs[Data Conversion Input].Columns[sog_kmh]"
+                      cachedDataType="numeric"
+                      cachedName="sog_kmh"
+                      cachedPrecision="6"
+                      cachedScale="2"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[sog_kmh]" />
+                    <inputColumn
+                      refId="Package\Extract VesselTracking to staging\Data Conversion.Inputs[Data Conversion Input].Columns[eta_minutes]"
+                      cachedDataType="numeric"
+                      cachedName="eta_minutes"
+                      cachedPrecision="10"
+                      cachedScale="2"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[eta_minutes]" />
+                    <inputColumn
+                      refId="Package\Extract VesselTracking to staging\Data Conversion.Inputs[Data Conversion Input].Columns[eta_hours]"
+                      cachedDataType="numeric"
+                      cachedName="eta_hours"
+                      cachedPrecision="8"
+                      cachedScale="2"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[eta_hours]" />
+                    <inputColumn
+                      refId="Package\Extract VesselTracking to staging\Data Conversion.Inputs[Data Conversion Input].Columns[vessel_type_enc]"
+                      cachedDataType="i4"
+                      cachedName="vessel_type_enc"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[vessel_type_enc]" />
+                    <inputColumn
+                      refId="Package\Extract VesselTracking to staging\Data Conversion.Inputs[Data Conversion Input].Columns[nav_status_enc]"
+                      cachedDataType="i4"
+                      cachedName="nav_status_enc"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[nav_status_enc]" />
+                    <inputColumn
+                      refId="Package\Extract VesselTracking to staging\Data Conversion.Inputs[Data Conversion Input].Columns[cargo_enc]"
+                      cachedDataType="i4"
+                      cachedName="cargo_enc"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[cargo_enc]" />
+                    <inputColumn
+                      refId="Package\Extract VesselTracking to staging\Data Conversion.Inputs[Data Conversion Input].Columns[speed_category]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="speed_category"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[speed_category]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Extract VesselTracking to staging\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of tracking_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of tracking_id]"
+                      name="Copy of tracking_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[tracking_id]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of mmsi]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of mmsi]"
+                      name="Copy of mmsi"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[mmsi]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of base_date_time]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of base_date_time]"
+                      name="Copy of base_date_time"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[base_date_time]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of latitude]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of latitude]"
+                      name="Copy of latitude"
+                      precision="10"
+                      scale="6"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[latitude]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of longitude]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of longitude]"
+                      name="Copy of longitude"
+                      precision="10"
+                      scale="6"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[longitude]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of sog]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of sog]"
+                      name="Copy of sog"
+                      precision="6"
+                      scale="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[sog]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of cog]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of cog]"
+                      name="Copy of cog"
+                      precision="6"
+                      scale="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[cog]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of heading]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of heading]"
+                      name="Copy of heading"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[heading]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of nav_status]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="60"
+                      lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of nav_status]"
+                      name="Copy of nav_status"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[nav_status]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of dest_cluster]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of dest_cluster]"
+                      name="Copy of dest_cluster"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[dest_cluster]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of dest_latitude]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of dest_latitude]"
+                      name="Copy of dest_latitude"
+                      precision="10"
+                      scale="6"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[dest_latitude]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of dest_longitude]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of dest_longitude]"
+                      name="Copy of dest_longitude"
+                      precision="10"
+                      scale="6"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[dest_longitude]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of dist_km]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of dist_km]"
+                      name="Copy of dist_km"
+                      precision="10"
+                      scale="3"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[dist_km]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of sog_kmh]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of sog_kmh]"
+                      name="Copy of sog_kmh"
+                      precision="6"
+                      scale="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[sog_kmh]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of eta_minutes]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of eta_minutes]"
+                      name="Copy of eta_minutes"
+                      precision="10"
+                      scale="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[eta_minutes]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of eta_hours]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of eta_hours]"
+                      name="Copy of eta_hours"
+                      precision="8"
+                      scale="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[eta_hours]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of vessel_type_enc]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of vessel_type_enc]"
+                      name="Copy of vessel_type_enc"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[vessel_type_enc]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of nav_status_enc]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of nav_status_enc]"
+                      name="Copy of nav_status_enc"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[nav_status_enc]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of cargo_enc]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of cargo_enc]"
+                      name="Copy of cargo_enc"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[cargo_enc]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of speed_category]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of speed_category]"
+                      name="Copy of speed_category"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[speed_category]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Extract VesselTracking to staging\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Load data to VesselTrackingStaging table"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[StgVesselTracking]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-VN0BD62\MSSQLSERVER2.AIS_Staging.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-VN0BD62\MSSQLSERVER2.AIS_Staging.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].Columns[Copy of tracking_id]"
+                      cachedDataType="i4"
+                      cachedName="Copy of tracking_id"
+                      externalMetadataColumnId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[tracking_id]"
+                      lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of tracking_id]" />
+                    <inputColumn
+                      refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].Columns[Copy of mmsi]"
+                      cachedDataType="i8"
+                      cachedName="Copy of mmsi"
+                      externalMetadataColumnId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[mmsi]"
+                      lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of mmsi]" />
+                    <inputColumn
+                      refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].Columns[Copy of base_date_time]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Copy of base_date_time"
+                      externalMetadataColumnId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[base_date_time]"
+                      lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of base_date_time]" />
+                    <inputColumn
+                      refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].Columns[Copy of latitude]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of latitude"
+                      cachedPrecision="10"
+                      cachedScale="6"
+                      externalMetadataColumnId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[latitude]"
+                      lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of latitude]" />
+                    <inputColumn
+                      refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].Columns[Copy of longitude]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of longitude"
+                      cachedPrecision="10"
+                      cachedScale="6"
+                      externalMetadataColumnId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[longitude]"
+                      lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of longitude]" />
+                    <inputColumn
+                      refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].Columns[Copy of sog]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of sog"
+                      cachedPrecision="6"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[sog]"
+                      lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of sog]" />
+                    <inputColumn
+                      refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].Columns[Copy of cog]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of cog"
+                      cachedPrecision="6"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[cog]"
+                      lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of cog]" />
+                    <inputColumn
+                      refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].Columns[Copy of heading]"
+                      cachedDataType="i2"
+                      cachedName="Copy of heading"
+                      externalMetadataColumnId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[heading]"
+                      lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of heading]" />
+                    <inputColumn
+                      refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].Columns[Copy of nav_status]"
+                      cachedDataType="wstr"
+                      cachedLength="60"
+                      cachedName="Copy of nav_status"
+                      externalMetadataColumnId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[nav_status]"
+                      lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of nav_status]" />
+                    <inputColumn
+                      refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].Columns[Copy of dest_cluster]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Copy of dest_cluster"
+                      externalMetadataColumnId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[dest_cluster]"
+                      lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of dest_cluster]" />
+                    <inputColumn
+                      refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].Columns[Copy of dest_latitude]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of dest_latitude"
+                      cachedPrecision="10"
+                      cachedScale="6"
+                      externalMetadataColumnId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[dest_latitude]"
+                      lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of dest_latitude]" />
+                    <inputColumn
+                      refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].Columns[Copy of dest_longitude]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of dest_longitude"
+                      cachedPrecision="10"
+                      cachedScale="6"
+                      externalMetadataColumnId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[dest_longitude]"
+                      lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of dest_longitude]" />
+                    <inputColumn
+                      refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].Columns[Copy of dist_km]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of dist_km"
+                      cachedPrecision="10"
+                      cachedScale="3"
+                      externalMetadataColumnId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[dist_km]"
+                      lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of dist_km]" />
+                    <inputColumn
+                      refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].Columns[Copy of sog_kmh]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of sog_kmh"
+                      cachedPrecision="6"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[sog_kmh]"
+                      lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of sog_kmh]" />
+                    <inputColumn
+                      refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].Columns[Copy of eta_minutes]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of eta_minutes"
+                      cachedPrecision="10"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[eta_minutes]"
+                      lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of eta_minutes]" />
+                    <inputColumn
+                      refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].Columns[Copy of eta_hours]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of eta_hours"
+                      cachedPrecision="8"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[eta_hours]"
+                      lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of eta_hours]" />
+                    <inputColumn
+                      refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].Columns[Copy of vessel_type_enc]"
+                      cachedDataType="i4"
+                      cachedName="Copy of vessel_type_enc"
+                      externalMetadataColumnId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[vessel_type_enc]"
+                      lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of vessel_type_enc]" />
+                    <inputColumn
+                      refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].Columns[Copy of nav_status_enc]"
+                      cachedDataType="i4"
+                      cachedName="Copy of nav_status_enc"
+                      externalMetadataColumnId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[nav_status_enc]"
+                      lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of nav_status_enc]" />
+                    <inputColumn
+                      refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].Columns[Copy of cargo_enc]"
+                      cachedDataType="i4"
+                      cachedName="Copy of cargo_enc"
+                      externalMetadataColumnId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[cargo_enc]"
+                      lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of cargo_enc]" />
+                    <inputColumn
+                      refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].Columns[Copy of speed_category]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="Copy of speed_category"
+                      externalMetadataColumnId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[speed_category]"
+                      lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of speed_category]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[tracking_id]"
+                      dataType="i4"
+                      name="tracking_id" />
+                    <externalMetadataColumn
+                      refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[mmsi]"
+                      dataType="i8"
+                      name="mmsi" />
+                    <externalMetadataColumn
+                      refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[base_date_time]"
+                      dataType="dbTimeStamp"
+                      name="base_date_time" />
+                    <externalMetadataColumn
+                      refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[latitude]"
+                      dataType="numeric"
+                      name="latitude"
+                      precision="10"
+                      scale="6" />
+                    <externalMetadataColumn
+                      refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[longitude]"
+                      dataType="numeric"
+                      name="longitude"
+                      precision="10"
+                      scale="6" />
+                    <externalMetadataColumn
+                      refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[sog]"
+                      dataType="numeric"
+                      name="sog"
+                      precision="6"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[cog]"
+                      dataType="numeric"
+                      name="cog"
+                      precision="6"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[heading]"
+                      dataType="i2"
+                      name="heading" />
+                    <externalMetadataColumn
+                      refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[nav_status]"
+                      dataType="wstr"
+                      length="60"
+                      name="nav_status" />
+                    <externalMetadataColumn
+                      refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[dest_cluster]"
+                      dataType="wstr"
+                      length="100"
+                      name="dest_cluster" />
+                    <externalMetadataColumn
+                      refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[dest_latitude]"
+                      dataType="numeric"
+                      name="dest_latitude"
+                      precision="10"
+                      scale="6" />
+                    <externalMetadataColumn
+                      refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[dest_longitude]"
+                      dataType="numeric"
+                      name="dest_longitude"
+                      precision="10"
+                      scale="6" />
+                    <externalMetadataColumn
+                      refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[dist_km]"
+                      dataType="numeric"
+                      name="dist_km"
+                      precision="10"
+                      scale="3" />
+                    <externalMetadataColumn
+                      refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[sog_kmh]"
+                      dataType="numeric"
+                      name="sog_kmh"
+                      precision="6"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[eta_minutes]"
+                      dataType="numeric"
+                      name="eta_minutes"
+                      precision="10"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[eta_hours]"
+                      dataType="numeric"
+                      name="eta_hours"
+                      precision="8"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[vessel_type_enc]"
+                      dataType="i4"
+                      name="vessel_type_enc" />
+                    <externalMetadataColumn
+                      refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[nav_status_enc]"
+                      dataType="i4"
+                      name="nav_status_enc" />
+                    <externalMetadataColumn
+                      refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[cargo_enc]"
+                      dataType="i4"
+                      name="cargo_enc" />
+                    <externalMetadataColumn
+                      refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[speed_category]"
+                      dataType="wstr"
+                      length="20"
+                      name="speed_category" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract VesselTracking to staging\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[VesselTracking]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract VesselTracking to staging\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-VN0BD62\MSSQLSERVER2.AIS_SourceDB.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-VN0BD62\MSSQLSERVER2.AIS_SourceDB.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[tracking_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[tracking_id]"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[tracking_id]"
+                      name="tracking_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[mmsi]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[mmsi]"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[mmsi]"
+                      name="mmsi"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[base_date_time]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[base_date_time]"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[base_date_time]"
+                      name="base_date_time"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[latitude]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[latitude]"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[latitude]"
+                      name="latitude"
+                      precision="10"
+                      scale="6"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[longitude]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[longitude]"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[longitude]"
+                      name="longitude"
+                      precision="10"
+                      scale="6"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[sog]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[sog]"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[sog]"
+                      name="sog"
+                      precision="6"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[cog]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[cog]"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[cog]"
+                      name="cog"
+                      precision="6"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[heading]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[heading]"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[heading]"
+                      name="heading"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[nav_status]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[nav_status]"
+                      length="60"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[nav_status]"
+                      name="nav_status"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[dest_cluster]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[dest_cluster]"
+                      length="100"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[dest_cluster]"
+                      name="dest_cluster"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[dest_latitude]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[dest_latitude]"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[dest_latitude]"
+                      name="dest_latitude"
+                      precision="10"
+                      scale="6"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[dest_longitude]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[dest_longitude]"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[dest_longitude]"
+                      name="dest_longitude"
+                      precision="10"
+                      scale="6"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[dist_km]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[dist_km]"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[dist_km]"
+                      name="dist_km"
+                      precision="10"
+                      scale="3"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[sog_kmh]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[sog_kmh]"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[sog_kmh]"
+                      name="sog_kmh"
+                      precision="6"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[eta_minutes]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[eta_minutes]"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[eta_minutes]"
+                      name="eta_minutes"
+                      precision="10"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[eta_hours]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[eta_hours]"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[eta_hours]"
+                      name="eta_hours"
+                      precision="8"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[vessel_type_enc]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[vessel_type_enc]"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[vessel_type_enc]"
+                      name="vessel_type_enc"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[nav_status_enc]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[nav_status_enc]"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[nav_status_enc]"
+                      name="nav_status_enc"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[cargo_enc]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[cargo_enc]"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[cargo_enc]"
+                      name="cargo_enc"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[speed_category]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[speed_category]"
+                      length="20"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[speed_category]"
+                      name="speed_category"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[tracking_id]"
+                      dataType="i4"
+                      name="tracking_id" />
+                    <externalMetadataColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[mmsi]"
+                      dataType="i8"
+                      name="mmsi" />
+                    <externalMetadataColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[base_date_time]"
+                      dataType="dbTimeStamp"
+                      name="base_date_time" />
+                    <externalMetadataColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[latitude]"
+                      dataType="numeric"
+                      name="latitude"
+                      precision="10"
+                      scale="6" />
+                    <externalMetadataColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[longitude]"
+                      dataType="numeric"
+                      name="longitude"
+                      precision="10"
+                      scale="6" />
+                    <externalMetadataColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[sog]"
+                      dataType="numeric"
+                      name="sog"
+                      precision="6"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[cog]"
+                      dataType="numeric"
+                      name="cog"
+                      precision="6"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[heading]"
+                      dataType="i2"
+                      name="heading" />
+                    <externalMetadataColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[nav_status]"
+                      dataType="wstr"
+                      length="60"
+                      name="nav_status" />
+                    <externalMetadataColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[dest_cluster]"
+                      dataType="wstr"
+                      length="100"
+                      name="dest_cluster" />
+                    <externalMetadataColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[dest_latitude]"
+                      dataType="numeric"
+                      name="dest_latitude"
+                      precision="10"
+                      scale="6" />
+                    <externalMetadataColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[dest_longitude]"
+                      dataType="numeric"
+                      name="dest_longitude"
+                      precision="10"
+                      scale="6" />
+                    <externalMetadataColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[dist_km]"
+                      dataType="numeric"
+                      name="dist_km"
+                      precision="10"
+                      scale="3" />
+                    <externalMetadataColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[sog_kmh]"
+                      dataType="numeric"
+                      name="sog_kmh"
+                      precision="6"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[eta_minutes]"
+                      dataType="numeric"
+                      name="eta_minutes"
+                      precision="10"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[eta_hours]"
+                      dataType="numeric"
+                      name="eta_hours"
+                      precision="8"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[vessel_type_enc]"
+                      dataType="i4"
+                      name="vessel_type_enc" />
+                    <externalMetadataColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[nav_status_enc]"
+                      dataType="i4"
+                      name="nav_status_enc" />
+                    <externalMetadataColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[cargo_enc]"
+                      dataType="i4"
+                      name="cargo_enc" />
+                    <externalMetadataColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[speed_category]"
+                      dataType="wstr"
+                      length="20"
+                      name="speed_category" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[tracking_id]"
+                      dataType="i4"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[tracking_id]"
+                      name="tracking_id" />
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[mmsi]"
+                      dataType="i8"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[mmsi]"
+                      name="mmsi" />
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[base_date_time]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[base_date_time]"
+                      name="base_date_time" />
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[latitude]"
+                      dataType="numeric"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[latitude]"
+                      name="latitude"
+                      precision="10"
+                      scale="6" />
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[longitude]"
+                      dataType="numeric"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[longitude]"
+                      name="longitude"
+                      precision="10"
+                      scale="6" />
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[sog]"
+                      dataType="numeric"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[sog]"
+                      name="sog"
+                      precision="6"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[cog]"
+                      dataType="numeric"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[cog]"
+                      name="cog"
+                      precision="6"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[heading]"
+                      dataType="i2"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[heading]"
+                      name="heading" />
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[nav_status]"
+                      dataType="wstr"
+                      length="60"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[nav_status]"
+                      name="nav_status" />
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[dest_cluster]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[dest_cluster]"
+                      name="dest_cluster" />
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[dest_latitude]"
+                      dataType="numeric"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[dest_latitude]"
+                      name="dest_latitude"
+                      precision="10"
+                      scale="6" />
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[dest_longitude]"
+                      dataType="numeric"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[dest_longitude]"
+                      name="dest_longitude"
+                      precision="10"
+                      scale="6" />
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[dist_km]"
+                      dataType="numeric"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[dist_km]"
+                      name="dist_km"
+                      precision="10"
+                      scale="3" />
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[sog_kmh]"
+                      dataType="numeric"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[sog_kmh]"
+                      name="sog_kmh"
+                      precision="6"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[eta_minutes]"
+                      dataType="numeric"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[eta_minutes]"
+                      name="eta_minutes"
+                      precision="10"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[eta_hours]"
+                      dataType="numeric"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[eta_hours]"
+                      name="eta_hours"
+                      precision="8"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[vessel_type_enc]"
+                      dataType="i4"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[vessel_type_enc]"
+                      name="vessel_type_enc" />
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[nav_status_enc]"
+                      dataType="i4"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[nav_status_enc]"
+                      name="nav_status_enc" />
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[cargo_enc]"
+                      dataType="i4"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[cargo_enc]"
+                      name="cargo_enc" />
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[speed_category]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[speed_category]"
+                      name="speed_category" />
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Extract VesselTracking to staging.Paths[Data Conversion Output]"
+              endId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Extract VesselTracking to staging.Paths[OLE DB Source Output]"
+              endId="Package\Extract VesselTracking to staging\Data Conversion.Inputs[Data Conversion Input]"
+              name="OLE DB Source Output"
+              startId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{903D5B63-D231-4BBD-B46C-4D30E7B891D4}"
+      DTS:From="Package\Extract Vessel Data to Staging"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Extract VesselTracking to staging" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="219.2,41.6"
+          Id="Package\Extract Vessel Data to Staging"
+          TopLeft="279.999984701475,47.6666663351986" />
+        <NodeLayout
+          Size="232.8,41.6"
+          Id="Package\Extract VesselTracking to staging"
+          TopLeft="274.166651686861,159.466665557755" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="390.083318194168,89.2666663351986">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,70.1999992225569"
+              Start="0,0"
+              End="0,62.6999992225569">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,62.6999992225569" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Extract Vessel Data to Staging">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="186.4,41.6"
+          Id="Package\Extract Vessel Data to Staging\OLE DB Vessel Source"
+          TopLeft="292.499984018505,74.5333328150378" />
+        <NodeLayout
+          Size="233.6,41.6"
+          Id="Package\Extract Vessel Data to Staging\Load data to Vessel Staging table"
+          TopLeft="292.499984018505,301.599997902711" />
+        <NodeLayout
+          Size="156,41.6"
+          Id="Package\Extract Vessel Data to Staging\Data Conversion"
+          TopLeft="311.666649637952,172.466665467355" />
+        <EdgeLayout
+          Id="Package\Extract Vessel Data to Staging.Paths[OLE DB Source Output]"
+          TopLeft="387.683316828228,116.133332815038">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,56.3333326523171"
+              Start="0,0"
+              End="0,48.8333326523171">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,48.8333326523171" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extract Vessel Data to Staging.Paths[Data Conversion Output]"
+          TopLeft="389.666649637952,214.066665467355">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="19.6333343805537,87.5333324353562"
+              Start="0,0"
+              End="19.6333343805537,80.0333324353562">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.7666662176781" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,39.7666662176781"
+                    Point2="0,43.7666662176781"
+                    Point3="4,43.7666662176781" />
+                  <mssgle:LineSegment
+                    End="15.6333343805537,43.7666662176781" />
+                  <mssgle:CubicBezierSegment
+                    Point1="15.6333343805537,43.7666662176781"
+                    Point2="19.6333343805537,43.7666662176781"
+                    Point3="19.6333343805537,47.7666662176781" />
+                  <mssgle:LineSegment
+                    End="19.6333343805537,80.0333324353562" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Vessel Data to Staging\OLE DB Vessel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Vessel Data to Staging\Load data to Vessel Staging table">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <DtsEventHandler
+    design-time-name="Package\Extract Vessel Data to Staging.EventHandlers[OnPreExecute]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="220.8,41.6"
+          Id="Package\Extract Vessel Data to Staging.EventHandlers[OnPreExecute]\Truncate Vessel Staging Table"
+          TopLeft="293.999995619059,47.9999992847442" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <TaskHost
+    design-time-name="Package\Extract VesselTracking to staging">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="152,41.6"
+          Id="Package\Extract VesselTracking to staging\OLE DB Source"
+          TopLeft="280.999995812774,53.9999991953373" />
+        <NodeLayout
+          Size="156,41.6"
+          Id="Package\Extract VesselTracking to staging\Data Conversion"
+          TopLeft="287.999995708466,146.999997809529" />
+        <EdgeLayout
+          Id="Package\Extract VesselTracking to staging.Paths[OLE DB Source Output]"
+          TopLeft="356.999995812774,95.5999991953373">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="8.99999989569181,51.399998614192"
+              Start="0,0"
+              End="8.99999989569181,43.899998614192">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.699999307096" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.699999307096"
+                    Point2="0,25.699999307096"
+                    Point3="4,25.699999307096" />
+                  <mssgle:LineSegment
+                    End="4.99999989569181,25.699999307096" />
+                  <mssgle:CubicBezierSegment
+                    Point1="4.99999989569181,25.699999307096"
+                    Point2="8.99999989569181,25.699999307096"
+                    Point3="8.99999989569181,29.699999307096" />
+                  <mssgle:LineSegment
+                    End="8.99999989569181,43.899998614192" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="270.4,41.6"
+          Id="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table"
+          TopLeft="338.999994948506,246.999996319413" />
+        <EdgeLayout
+          Id="Package\Extract VesselTracking to staging.Paths[Data Conversion Output]"
+          TopLeft="365.999995708466,188.599997809529">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="108.199999240041,58.3999985098839"
+              Start="0,0"
+              End="108.199999240041,50.8999985098839">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.199999254942" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.199999254942"
+                    Point2="0,29.199999254942"
+                    Point3="4,29.199999254942" />
+                  <mssgle:LineSegment
+                    End="104.199999240041,29.199999254942" />
+                  <mssgle:CubicBezierSegment
+                    Point1="104.199999240041,29.199999254942"
+                    Point2="108.199999240041,29.199999254942"
+                    Point3="108.199999240041,33.199999254942" />
+                  <mssgle:LineSegment
+                    End="108.199999240041,50.8999985098839" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract VesselTracking to staging\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <DtsEventHandler
+    design-time-name="Package\Extract VesselTracking to staging.EventHandlers[OnPreExecute]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="260,41.6"
+          Id="Package\Extract VesselTracking to staging.EventHandlers[OnPreExecute]\Truncate VesselTracking Staging Table"
+          TopLeft="321.999995201826,73.9999988973141" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
