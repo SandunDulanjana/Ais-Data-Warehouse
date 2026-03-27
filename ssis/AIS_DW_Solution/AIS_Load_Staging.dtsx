@@ -11,48 +11,1847 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="AIS_Load_Staging"
   DTS:PackageType="5"
-  DTS:VersionBuild="17"
-  DTS:VersionGUID="{3383C4C6-9BCA-4F26-8705-FB49894E0E68}">
+  DTS:VersionBuild="72"
+  DTS:VersionGUID="{9B73F8F5-EF69-4456-8FE4-0FFA8E55A94A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-VN0BD62\MSSQLSERVER2.AIS_SourceDB.sa]"
+      DTS:refId="Package.ConnectionManagers[DESKTOP-VN0BD62\MSSQLSERVER2.AIS_SourceDB.sa 1]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{73FE46C7-DD69-4089-A8B2-933CFF7A6F8B}"
-      DTS:ObjectName="DESKTOP-VN0BD62\MSSQLSERVER2.AIS_SourceDB.sa">
+      DTS:DTSID="{B2406931-D78A-4113-9A62-424B5A982D7A}"
+      DTS:ObjectName="DESKTOP-VN0BD62\MSSQLSERVER2.AIS_SourceDB.sa 1">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-VN0BD62\MSSQLSERVER2;User ID=sa;Initial Catalog=AIS_SourceDB;Provider=MSOLEDBSQL.1;Application Name=SSIS-AIS_Load_Staging-{73FE46C7-DD69-4089-A8B2-933CFF7A6F8B}DESKTOP-VN0BD62\MSSQLSERVER2.AIS_SourceDB.sa;Auto Translate=False;">
+          DTS:ConnectionString="Data Source=DESKTOP-VN0BD62\MSSQLSERVER2;User ID=sa;Initial Catalog=AIS_SourceDB;Provider=SQLOLEDB.1;Application Name=SSIS-AIS_Load_Staging-{B2406931-D78A-4113-9A62-424B5A982D7A}DESKTOP-VN0BD62\MSSQLSERVER2.AIS_SourceDB.sa 1;Auto Translate=False;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAAden2bq68kWP1lL5+j0SiwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABcyw1AQeLp3zw89295qNVFgzLKcglkMMJ9RM+nXAhhyQAAAAAOgAAAAAIAACAAAAC7S0gmEWn+NvHGBNLGVON+41l8E1KgsLga6XbSpaymEyAAAABYoTNHfd7I5kZ/5vvdtvd8PzURil+ltsKKeUXaKIn/tUAAAADLdIxklEljEPe9A3hYJGVA1EuvBMhaPtnr42iVU6c68AReoNzdXVz+kvR/p+QZtqKxN2nb/JeBpYR1PuAuWlr8</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAAden2bq68kWP1lL5+j0SiwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACSC429Tx3k24hR+B+Mml9+tnz9+LBHSOvdROVi0OEjWwAAAAAOgAAAAAIAACAAAADRQzTo1rfCoIA29BS0XZHUy4/d/jc4uZj4bux6z4wO4iAAAACQRNqd3iVa8ZI8hP3G3WftNkXj6ZM9Ei8tWHFgdsWtqUAAAAAoNI+9MeKWKOlu8kNvn/pvUmONsW5W3gKeiT3Z3VCIgjSLklsPMvq90hQqc0PCHEKKil2KxTNasZPuWMbQW4lq</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-VN0BD62\MSSQLSERVER2.AIS_Staging.sa]"
+      DTS:refId="Package.ConnectionManagers[DESKTOP-VN0BD62\MSSQLSERVER2.AIS_Staging.sa 1]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{47AC2004-FDDA-4653-B683-BB6A23C7E065}"
-      DTS:ObjectName="DESKTOP-VN0BD62\MSSQLSERVER2.AIS_Staging.sa">
+      DTS:DTSID="{A490930D-DC7C-434E-A75E-AADA0FEA8B63}"
+      DTS:ObjectName="DESKTOP-VN0BD62\MSSQLSERVER2.AIS_Staging.sa 1">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-VN0BD62\MSSQLSERVER2;User ID=sa;Initial Catalog=AIS_Staging;Provider=SQLOLEDB.1;Application Name=SSIS-AIS_Load_Staging-{47AC2004-FDDA-4653-B683-BB6A23C7E065}DESKTOP-VN0BD62\MSSQLSERVER2.AIS_Staging.sa;Auto Translate=False;">
+          DTS:ConnectionString="Data Source=DESKTOP-VN0BD62\MSSQLSERVER2;User ID=sa;Initial Catalog=AIS_Staging;Provider=SQLOLEDB.1;Application Name=SSIS-AIS_Load_Staging-{A490930D-DC7C-434E-A75E-AADA0FEA8B63}DESKTOP-VN0BD62\MSSQLSERVER2.AIS_Staging.sa 1;Auto Translate=False;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAAden2bq68kWP1lL5+j0SiwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAChfgzRYUf7aOFbbhe99jB5421JuOXd6619Yyc0OqKllwAAAAAOgAAAAAIAACAAAAD2MMBPC888rsQkk/0zCN6NTHHBbEllm0FPZzAXPds5rSAAAAAf3lNYnSuZ6QXTN0tE2Ppa2VstdPSLXsdXP+ywVpOwXkAAAADeMJBpyCo8/Bb/hFwiRdKtvuTY71sKJSTcLU42tLWNKjltRBC628lmhSvYJWUqOoCfv5aL63wVTKg/wmf4DoQj</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAAden2bq68kWP1lL5+j0SiwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAKVIKfeXHGI7tzoVLOnTeO65SmqnDVB/G3e28T2qej7AAAAAAOgAAAAAIAACAAAACaJGh8WP2c2C7zHture6GBZx/yP2WU9AH0C9ptgGktjCAAAAD+P9yZDpURgQFtzqHC+RviDCKyRXGJsFBkkVwHHUKvGkAAAADd/9CV5QehVI0slXe9zDZ1lYz4Sz6gbNTw/R+370RZfPUyFIHIrA1fmt/ZJdABj9PcGuJmW9CdkUpUIl3yrpCR</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:Description="Tracking CSV  file load to stage"
+      DTS:DTSID="{ABBAC3C0-ED80-448B-A50F-B81B3A8B40B8}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\User\Documents\github\Ais-Data-Warehouse\sources\tracking_source_40pct.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="mmsi"
+              DTS:DTSID="{5B5707EA-334B-4BD5-8083-877B45CD623E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="base_date_time"
+              DTS:DTSID="{93D01D61-9590-4345-AD24-30BC25D0D940}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="latitude"
+              DTS:DTSID="{3B43F074-061C-4FC5-8DE9-998CC31C24C6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="longitude"
+              DTS:DTSID="{07F81467-1D56-4522-9F90-DBCBCF4431C1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="sog"
+              DTS:DTSID="{B1B4907D-FB36-4415-935E-067292FADBC7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cog"
+              DTS:DTSID="{6BFD5587-BFE2-479A-8717-23771B0B0430}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="heading"
+              DTS:DTSID="{713865B6-5157-41F9-A0CC-9F5FC51D5E2F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="nav_status"
+              DTS:DTSID="{E4EADC42-D81C-4D72-8B91-099CF6340922}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="dest_cluster"
+              DTS:DTSID="{A4C437F9-4261-4203-9474-8A809C58F6CD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="dest_latitude"
+              DTS:DTSID="{B55823E4-0F21-49E7-954E-4B9B31E55B2A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="dest_longitude"
+              DTS:DTSID="{07445306-61AB-4548-B780-7A963A99AD5D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="dist_km"
+              DTS:DTSID="{3963BF69-460B-4782-A5CB-DF5DFB5E243B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="sog_kmh"
+              DTS:DTSID="{8A8D9E78-A882-48E0-8D9E-569A4134F217}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="eta_minutes"
+              DTS:DTSID="{2886B342-62AD-4419-ADA7-A607D0840E08}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="eta_hours"
+              DTS:DTSID="{D1EE4190-A2E5-4933-9733-2CC70702D86B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="vessel_type_enc"
+              DTS:DTSID="{2F35C791-4E61-447C-B5AA-3785D2EFE50B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="nav_status_enc"
+              DTS:DTSID="{388364C3-CA96-40FB-A268-93ED5ECD5A83}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cargo_enc"
+              DTS:DTSID="{F55106D6-7C07-4FE6-8E3E-5D3A451DAFC1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="speed_category"
+              DTS:DTSID="{1DAC07EF-33CE-4CCE-9592-4CE6B53F9E18}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Extract Tracking CSV Data to Staging"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{DA2F147D-5FC4-4D76-BF35-5C43272B572D}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Extract Tracking CSV Data to Staging"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:EventHandlers>
+        <DTS:EventHandler
+          DTS:refId="Package\Extract Tracking CSV Data to Staging.EventHandlers[OnError]"
+          DTS:CreationName="OnError"
+          DTS:DTSID="{3344C30F-D854-403B-BE88-1E0B2A30614A}"
+          DTS:EventID="1970238055"
+          DTS:EventName="OnError"
+          DTS:LocaleID="-1">
+          <DTS:Variables>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:Description="The propagate property of the event"
+              DTS:DTSID="{A8700CEB-6557-4E03-82C0-113954405668}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="System"
+              DTS:ObjectName="Propagate">
+              <DTS:VariableValue
+                DTS:DataType="11">-1</DTS:VariableValue>
+            </DTS:Variable>
+          </DTS:Variables>
+          <DTS:Executables />
+        </DTS:EventHandler>
+        <DTS:EventHandler
+          DTS:refId="Package\Extract Tracking CSV Data to Staging.EventHandlers[OnPreExecute]"
+          DTS:CreationName="OnPreExecute"
+          DTS:DTSID="{4E6CCEB3-71B8-4D2A-AA6E-7C36A4B37CE5}"
+          DTS:EventID="-65180"
+          DTS:EventName="OnPreExecute"
+          DTS:LocaleID="-1">
+          <DTS:Variables>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:Description="The propagate property of the event"
+              DTS:DTSID="{B2CAD9FA-5A43-4470-ADC3-55F7B05F7ADA}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="System"
+              DTS:ObjectName="Propagate">
+              <DTS:VariableValue
+                DTS:DataType="11">-1</DTS:VariableValue>
+            </DTS:Variable>
+          </DTS:Variables>
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Extract Tracking CSV Data to Staging.EventHandlers[OnPreExecute]\Truncate Tracking CSV Staging Table"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{A5094197-B6A1-4B14-BEFA-F51E04228DF1}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Truncate Tracking CSV Staging Table"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{A490930D-DC7C-434E-A75E-AADA0FEA8B63}"
+                  SQLTask:SqlStatementSource="TRUNCATE TABLE dbo.StgVesselTracking" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+        </DTS:EventHandler>
+      </DTS:EventHandlers>
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Extract Tracking CSV Data to Staging\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Inputs[Data Conversion Input].Columns[mmsi]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="mmsi"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[mmsi]" />
+                    <inputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Inputs[Data Conversion Input].Columns[base_date_time]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="base_date_time"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[base_date_time]" />
+                    <inputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Inputs[Data Conversion Input].Columns[latitude]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="latitude"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[latitude]" />
+                    <inputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Inputs[Data Conversion Input].Columns[longitude]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="longitude"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[longitude]" />
+                    <inputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Inputs[Data Conversion Input].Columns[sog]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="sog"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[sog]" />
+                    <inputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Inputs[Data Conversion Input].Columns[cog]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="cog"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[cog]" />
+                    <inputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Inputs[Data Conversion Input].Columns[heading]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="heading"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[heading]" />
+                    <inputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Inputs[Data Conversion Input].Columns[nav_status]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="nav_status"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[nav_status]" />
+                    <inputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Inputs[Data Conversion Input].Columns[dest_cluster]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="dest_cluster"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[dest_cluster]" />
+                    <inputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Inputs[Data Conversion Input].Columns[dest_latitude]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="dest_latitude"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[dest_latitude]" />
+                    <inputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Inputs[Data Conversion Input].Columns[dest_longitude]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="dest_longitude"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[dest_longitude]" />
+                    <inputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Inputs[Data Conversion Input].Columns[dist_km]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="dist_km"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[dist_km]" />
+                    <inputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Inputs[Data Conversion Input].Columns[sog_kmh]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="sog_kmh"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[sog_kmh]" />
+                    <inputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Inputs[Data Conversion Input].Columns[eta_minutes]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="eta_minutes"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[eta_minutes]" />
+                    <inputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Inputs[Data Conversion Input].Columns[eta_hours]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="eta_hours"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[eta_hours]" />
+                    <inputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Inputs[Data Conversion Input].Columns[vessel_type_enc]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="vessel_type_enc"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[vessel_type_enc]" />
+                    <inputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Inputs[Data Conversion Input].Columns[nav_status_enc]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="nav_status_enc"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[nav_status_enc]" />
+                    <inputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Inputs[Data Conversion Input].Columns[cargo_enc]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="cargo_enc"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[cargo_enc]" />
+                    <inputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Inputs[Data Conversion Input].Columns[speed_category]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="speed_category"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[speed_category]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of mmsi]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of mmsi]"
+                      name="Copy of mmsi"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[mmsi]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of base_date_time]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of base_date_time]"
+                      name="Copy of base_date_time"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[base_date_time]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of latitude]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of latitude]"
+                      name="Copy of latitude"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[latitude]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of longitude]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of longitude]"
+                      name="Copy of longitude"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[longitude]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of sog]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of sog]"
+                      name="Copy of sog"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[sog]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of cog]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of cog]"
+                      name="Copy of cog"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[cog]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of heading]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of heading]"
+                      name="Copy of heading"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[heading]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of nav_status]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of nav_status]"
+                      name="Copy of nav_status"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[nav_status]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of dest_cluster]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of dest_cluster]"
+                      name="Copy of dest_cluster"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[dest_cluster]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of dest_latitude]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of dest_latitude]"
+                      name="Copy of dest_latitude"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[dest_latitude]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of dest_longitude]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of dest_longitude]"
+                      name="Copy of dest_longitude"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[dest_longitude]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of dist_km]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of dist_km]"
+                      name="Copy of dist_km"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[dist_km]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of sog_kmh]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of sog_kmh]"
+                      name="Copy of sog_kmh"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[sog_kmh]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of eta_minutes]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of eta_minutes]"
+                      name="Copy of eta_minutes"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[eta_minutes]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of eta_hours]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of eta_hours]"
+                      name="Copy of eta_hours"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[eta_hours]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of vessel_type_enc]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of vessel_type_enc]"
+                      name="Copy of vessel_type_enc"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[vessel_type_enc]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of nav_status_enc]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of nav_status_enc]"
+                      name="Copy of nav_status_enc"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[nav_status_enc]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of cargo_enc]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of cargo_enc]"
+                      name="Copy of cargo_enc"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[cargo_enc]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of speed_category]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of speed_category]"
+                      name="Copy of speed_category"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[speed_category]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Load data to Tracking CSV Staging table"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[StgVesselTracking]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-VN0BD62\MSSQLSERVER2.AIS_Staging.sa 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-VN0BD62\MSSQLSERVER2.AIS_Staging.sa 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].Columns[Copy of mmsi]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of mmsi"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].ExternalColumns[mmsi]"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of mmsi]" />
+                    <inputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].Columns[Copy of base_date_time]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Copy of base_date_time"
+                      externalMetadataColumnId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].ExternalColumns[base_date_time]"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of base_date_time]" />
+                    <inputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].Columns[Copy of latitude]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of latitude"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].ExternalColumns[latitude]"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of latitude]" />
+                    <inputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].Columns[Copy of longitude]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of longitude"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].ExternalColumns[longitude]"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of longitude]" />
+                    <inputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].Columns[Copy of sog]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of sog"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].ExternalColumns[sog]"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of sog]" />
+                    <inputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].Columns[Copy of cog]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of cog"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].ExternalColumns[cog]"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of cog]" />
+                    <inputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].Columns[Copy of heading]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of heading"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].ExternalColumns[heading]"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of heading]" />
+                    <inputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].Columns[Copy of nav_status]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of nav_status"
+                      externalMetadataColumnId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].ExternalColumns[nav_status]"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of nav_status]" />
+                    <inputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].Columns[Copy of dest_cluster]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of dest_cluster"
+                      externalMetadataColumnId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].ExternalColumns[dest_cluster]"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of dest_cluster]" />
+                    <inputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].Columns[Copy of dest_latitude]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of dest_latitude"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].ExternalColumns[dest_latitude]"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of dest_latitude]" />
+                    <inputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].Columns[Copy of dest_longitude]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of dest_longitude"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].ExternalColumns[dest_longitude]"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of dest_longitude]" />
+                    <inputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].Columns[Copy of dist_km]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of dist_km"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].ExternalColumns[dist_km]"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of dist_km]" />
+                    <inputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].Columns[Copy of sog_kmh]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of sog_kmh"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].ExternalColumns[sog_kmh]"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of sog_kmh]" />
+                    <inputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].Columns[Copy of eta_minutes]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of eta_minutes"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].ExternalColumns[eta_minutes]"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of eta_minutes]" />
+                    <inputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].Columns[Copy of eta_hours]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of eta_hours"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].ExternalColumns[eta_hours]"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of eta_hours]" />
+                    <inputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].Columns[Copy of vessel_type_enc]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of vessel_type_enc"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].ExternalColumns[vessel_type_enc]"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of vessel_type_enc]" />
+                    <inputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].Columns[Copy of nav_status_enc]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of nav_status_enc"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].ExternalColumns[nav_status_enc]"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of nav_status_enc]" />
+                    <inputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].Columns[Copy of cargo_enc]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of cargo_enc"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].ExternalColumns[cargo_enc]"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of cargo_enc]" />
+                    <inputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].Columns[Copy of speed_category]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="Copy of speed_category"
+                      externalMetadataColumnId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].ExternalColumns[speed_category]"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of speed_category]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].ExternalColumns[mmsi]"
+                      dataType="i8"
+                      name="mmsi" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].ExternalColumns[base_date_time]"
+                      dataType="dbTimeStamp"
+                      name="base_date_time" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].ExternalColumns[latitude]"
+                      dataType="numeric"
+                      name="latitude"
+                      precision="10"
+                      scale="6" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].ExternalColumns[longitude]"
+                      dataType="numeric"
+                      name="longitude"
+                      precision="10"
+                      scale="6" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].ExternalColumns[sog]"
+                      dataType="numeric"
+                      name="sog"
+                      precision="6"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].ExternalColumns[cog]"
+                      dataType="numeric"
+                      name="cog"
+                      precision="6"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].ExternalColumns[heading]"
+                      dataType="i2"
+                      name="heading" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].ExternalColumns[nav_status]"
+                      dataType="wstr"
+                      length="60"
+                      name="nav_status" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].ExternalColumns[dest_cluster]"
+                      dataType="wstr"
+                      length="100"
+                      name="dest_cluster" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].ExternalColumns[dest_latitude]"
+                      dataType="numeric"
+                      name="dest_latitude"
+                      precision="10"
+                      scale="6" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].ExternalColumns[dest_longitude]"
+                      dataType="numeric"
+                      name="dest_longitude"
+                      precision="10"
+                      scale="6" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].ExternalColumns[dist_km]"
+                      dataType="numeric"
+                      name="dist_km"
+                      precision="10"
+                      scale="3" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].ExternalColumns[sog_kmh]"
+                      dataType="numeric"
+                      name="sog_kmh"
+                      precision="6"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].ExternalColumns[eta_minutes]"
+                      dataType="numeric"
+                      name="eta_minutes"
+                      precision="10"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].ExternalColumns[eta_hours]"
+                      dataType="numeric"
+                      name="eta_hours"
+                      precision="8"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].ExternalColumns[vessel_type_enc]"
+                      dataType="i4"
+                      name="vessel_type_enc" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].ExternalColumns[nav_status_enc]"
+                      dataType="i4"
+                      name="nav_status_enc" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].ExternalColumns[cargo_enc]"
+                      dataType="i4"
+                      name="cargo_enc" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].ExternalColumns[speed_category]"
+                      dataType="wstr"
+                      length="50"
+                      name="speed_category" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input].ExternalColumns[tracking_id]"
+                      dataType="i4"
+                      name="tracking_id" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Tracking CSV Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[mmsi]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].ExternalColumns[mmsi]"
+                      length="50"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[mmsi]"
+                      name="mmsi"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[base_date_time]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].ExternalColumns[base_date_time]"
+                      length="50"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[base_date_time]"
+                      name="base_date_time"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[latitude]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].ExternalColumns[latitude]"
+                      length="50"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[latitude]"
+                      name="latitude"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[longitude]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].ExternalColumns[longitude]"
+                      length="50"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[longitude]"
+                      name="longitude"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[sog]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].ExternalColumns[sog]"
+                      length="50"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[sog]"
+                      name="sog"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[cog]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cog]"
+                      length="50"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[cog]"
+                      name="cog"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[heading]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].ExternalColumns[heading]"
+                      length="50"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[heading]"
+                      name="heading"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[nav_status]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].ExternalColumns[nav_status]"
+                      length="50"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[nav_status]"
+                      name="nav_status"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[dest_cluster]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].ExternalColumns[dest_cluster]"
+                      length="50"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[dest_cluster]"
+                      name="dest_cluster"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[dest_latitude]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].ExternalColumns[dest_latitude]"
+                      length="50"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[dest_latitude]"
+                      name="dest_latitude"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[dest_longitude]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].ExternalColumns[dest_longitude]"
+                      length="50"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[dest_longitude]"
+                      name="dest_longitude"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[dist_km]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].ExternalColumns[dist_km]"
+                      length="50"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[dist_km]"
+                      name="dist_km"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[sog_kmh]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].ExternalColumns[sog_kmh]"
+                      length="50"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[sog_kmh]"
+                      name="sog_kmh"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[eta_minutes]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].ExternalColumns[eta_minutes]"
+                      length="50"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[eta_minutes]"
+                      name="eta_minutes"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[eta_hours]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].ExternalColumns[eta_hours]"
+                      length="50"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[eta_hours]"
+                      name="eta_hours"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[vessel_type_enc]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].ExternalColumns[vessel_type_enc]"
+                      length="50"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[vessel_type_enc]"
+                      name="vessel_type_enc"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[nav_status_enc]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].ExternalColumns[nav_status_enc]"
+                      length="50"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[nav_status_enc]"
+                      name="nav_status_enc"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[cargo_enc]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cargo_enc]"
+                      length="50"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[cargo_enc]"
+                      name="cargo_enc"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[speed_category]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].ExternalColumns[speed_category]"
+                      length="50"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].Columns[speed_category]"
+                      name="speed_category"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].ExternalColumns[mmsi]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="mmsi" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].ExternalColumns[base_date_time]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="base_date_time" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].ExternalColumns[latitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].ExternalColumns[longitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="longitude" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].ExternalColumns[sog]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="sog" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cog]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="cog" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].ExternalColumns[heading]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="heading" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].ExternalColumns[nav_status]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="nav_status" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].ExternalColumns[dest_cluster]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="dest_cluster" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].ExternalColumns[dest_latitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="dest_latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].ExternalColumns[dest_longitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="dest_longitude" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].ExternalColumns[dist_km]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="dist_km" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].ExternalColumns[sog_kmh]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="sog_kmh" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].ExternalColumns[eta_minutes]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="eta_minutes" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].ExternalColumns[eta_hours]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="eta_hours" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].ExternalColumns[vessel_type_enc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vessel_type_enc" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].ExternalColumns[nav_status_enc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="nav_status_enc" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cargo_enc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="cargo_enc" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output].ExternalColumns[speed_category]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="speed_category" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Extract Tracking CSV Data to Staging.Paths[Data Conversion Output]"
+              endId="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Extract Tracking CSV Data to Staging.Paths[Flat File Source Output]"
+              endId="Package\Extract Tracking CSV Data to Staging\Data Conversion.Inputs[Data Conversion Input]"
+              name="Flat File Source Output"
+              startId="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Extract Vessel Data to Staging"
       DTS:CreationName="Microsoft.Pipeline"
@@ -96,7 +1895,7 @@
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
-                  SQLTask:Connection="{47AC2004-FDDA-4653-B683-BB6A23C7E065}"
+                  SQLTask:Connection="{A490930D-DC7C-434E-A75E-AADA0FEA8B63}"
                   SQLTask:SqlStatementSource="TRUNCATE TABLE dbo.StgVessel" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
               </DTS:ObjectData>
             </DTS:Executable>
@@ -486,8 +2285,8 @@
               <connections>
                 <connection
                   refId="Package\Extract Vessel Data to Staging\Load data to Vessel Staging table.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-VN0BD62\MSSQLSERVER2.AIS_Staging.sa]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-VN0BD62\MSSQLSERVER2.AIS_Staging.sa]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-VN0BD62\MSSQLSERVER2.AIS_Staging.sa 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-VN0BD62\MSSQLSERVER2.AIS_Staging.sa 1]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -701,8 +2500,8 @@
               <connections>
                 <connection
                   refId="Package\Extract Vessel Data to Staging\OLE DB Vessel Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-VN0BD62\MSSQLSERVER2.AIS_SourceDB.sa]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-VN0BD62\MSSQLSERVER2.AIS_SourceDB.sa]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-VN0BD62\MSSQLSERVER2.AIS_SourceDB.sa 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-VN0BD62\MSSQLSERVER2.AIS_SourceDB.sa 1]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1007,7 +2806,7 @@
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
-                  SQLTask:Connection="{47AC2004-FDDA-4653-B683-BB6A23C7E065}"
+                  SQLTask:Connection="{A490930D-DC7C-434E-A75E-AADA0FEA8B63}"
                   SQLTask:SqlStatementSource="truncate table dbo.StgVesselTracking" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
               </DTS:ObjectData>
             </DTS:Executable>
@@ -1030,11 +2829,6 @@
                   refId="Package\Extract VesselTracking to staging\Data Conversion.Inputs[Data Conversion Input]"
                   name="Data Conversion Input">
                   <inputColumns>
-                    <inputColumn
-                      refId="Package\Extract VesselTracking to staging\Data Conversion.Inputs[Data Conversion Input].Columns[tracking_id]"
-                      cachedDataType="i4"
-                      cachedName="tracking_id"
-                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[tracking_id]" />
                     <inputColumn
                       refId="Package\Extract VesselTracking to staging\Data Conversion.Inputs[Data Conversion Input].Columns[mmsi]"
                       cachedDataType="i8"
@@ -1153,6 +2947,11 @@
                       cachedLength="20"
                       cachedName="speed_category"
                       lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[speed_category]" />
+                    <inputColumn
+                      refId="Package\Extract VesselTracking to staging\Data Conversion.Inputs[Data Conversion Input].Columns[tracking_id]"
+                      cachedDataType="i4"
+                      cachedName="tracking_id"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[tracking_id]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -1165,32 +2964,13 @@
                   synchronousInputId="Package\Extract VesselTracking to staging\Data Conversion.Inputs[Data Conversion Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of tracking_id]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of tracking_id]"
-                      name="Copy of tracking_id"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[tracking_id]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
                       refId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of mmsi]"
-                      dataType="i8"
+                      dataType="numeric"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of mmsi]"
                       name="Copy of mmsi"
+                      precision="18"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -1314,11 +3094,12 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of heading]"
-                      dataType="i2"
+                      dataType="numeric"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of heading]"
                       name="Copy of heading"
+                      precision="18"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -1508,11 +3289,12 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of vessel_type_enc]"
-                      dataType="i4"
+                      dataType="numeric"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of vessel_type_enc]"
                       name="Copy of vessel_type_enc"
+                      precision="18"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -1528,11 +3310,12 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of nav_status_enc]"
-                      dataType="i4"
+                      dataType="numeric"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of nav_status_enc]"
                       name="Copy of nav_status_enc"
+                      precision="18"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -1548,11 +3331,12 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of cargo_enc]"
-                      dataType="i4"
+                      dataType="numeric"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of cargo_enc]"
                       name="Copy of cargo_enc"
+                      precision="18"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -1581,6 +3365,26 @@
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
                           name="SourceInputColumnLineageID">#{Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[speed_category]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of tracking_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of tracking_id]"
+                      name="Copy of tracking_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[tracking_id]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -1673,8 +3477,8 @@
               <connections>
                 <connection
                   refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-VN0BD62\MSSQLSERVER2.AIS_Staging.sa]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-VN0BD62\MSSQLSERVER2.AIS_Staging.sa]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-VN0BD62\MSSQLSERVER2.AIS_Staging.sa 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-VN0BD62\MSSQLSERVER2.AIS_Staging.sa 1]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1687,15 +3491,10 @@
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].Columns[Copy of tracking_id]"
-                      cachedDataType="i4"
-                      cachedName="Copy of tracking_id"
-                      externalMetadataColumnId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[tracking_id]"
-                      lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of tracking_id]" />
-                    <inputColumn
                       refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].Columns[Copy of mmsi]"
-                      cachedDataType="i8"
+                      cachedDataType="numeric"
                       cachedName="Copy of mmsi"
+                      cachedPrecision="18"
                       externalMetadataColumnId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[mmsi]"
                       lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of mmsi]" />
                     <inputColumn
@@ -1738,8 +3537,9 @@
                       lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of cog]" />
                     <inputColumn
                       refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].Columns[Copy of heading]"
-                      cachedDataType="i2"
+                      cachedDataType="numeric"
                       cachedName="Copy of heading"
+                      cachedPrecision="18"
                       externalMetadataColumnId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[heading]"
                       lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of heading]" />
                     <inputColumn
@@ -1806,20 +3606,23 @@
                       lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of eta_hours]" />
                     <inputColumn
                       refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].Columns[Copy of vessel_type_enc]"
-                      cachedDataType="i4"
+                      cachedDataType="numeric"
                       cachedName="Copy of vessel_type_enc"
+                      cachedPrecision="18"
                       externalMetadataColumnId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[vessel_type_enc]"
                       lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of vessel_type_enc]" />
                     <inputColumn
                       refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].Columns[Copy of nav_status_enc]"
-                      cachedDataType="i4"
+                      cachedDataType="numeric"
                       cachedName="Copy of nav_status_enc"
+                      cachedPrecision="18"
                       externalMetadataColumnId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[nav_status_enc]"
                       lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of nav_status_enc]" />
                     <inputColumn
                       refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].Columns[Copy of cargo_enc]"
-                      cachedDataType="i4"
+                      cachedDataType="numeric"
                       cachedName="Copy of cargo_enc"
+                      cachedPrecision="18"
                       externalMetadataColumnId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[cargo_enc]"
                       lineageId="Package\Extract VesselTracking to staging\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of cargo_enc]" />
                     <inputColumn
@@ -1832,10 +3635,6 @@
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[tracking_id]"
-                      dataType="i4"
-                      name="tracking_id" />
                     <externalMetadataColumn
                       refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[mmsi]"
                       dataType="i8"
@@ -1933,8 +3732,12 @@
                     <externalMetadataColumn
                       refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[speed_category]"
                       dataType="wstr"
-                      length="20"
+                      length="50"
                       name="speed_category" />
+                    <externalMetadataColumn
+                      refId="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table.Inputs[OLE DB Destination Input].ExternalColumns[tracking_id]"
+                      dataType="i4"
+                      name="tracking_id" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -2014,8 +3817,8 @@
               <connections>
                 <connection
                   refId="Package\Extract VesselTracking to staging\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-VN0BD62\MSSQLSERVER2.AIS_SourceDB.sa]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-VN0BD62\MSSQLSERVER2.AIS_SourceDB.sa]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-VN0BD62\MSSQLSERVER2.AIS_SourceDB.sa 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-VN0BD62\MSSQLSERVER2.AIS_SourceDB.sa 1]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2341,6 +4144,18 @@
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
                       refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[tracking_id]"
                       dataType="i4"
                       lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[tracking_id]"
@@ -2463,18 +4278,6 @@
                       length="20"
                       lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[speed_category]"
                       name="speed_category" />
-                    <outputColumn
-                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Extract VesselTracking to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -2506,6 +4309,14 @@
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
       DTS:To="Package\Extract VesselTracking to staging" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{C582FE40-3FBE-4A46-9F7C-CE97219670AC}"
+      DTS:From="Package\Extract VesselTracking to staging"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Extract Tracking CSV Data to Staging" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -2518,29 +4329,55 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="252,41.6"
+          Id="Package\Extract Tracking CSV Data to Staging"
+          TopLeft="262.121197799541,290.806058583831" />
         <NodeLayout
           Size="219.2,41.6"
           Id="Package\Extract Vessel Data to Staging"
-          TopLeft="279.999984701475,47.6666663351986" />
+          TopLeft="279.999984701475,50.8181814647985" />
         <NodeLayout
           Size="232.8,41.6"
           Id="Package\Extract VesselTracking to staging"
-          TopLeft="274.166651686861,159.466665557755" />
+          TopLeft="275.833318262465,171.993938197915" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="390.083318194168,89.2666663351986">
+          TopLeft="390.91665148197,92.4181814647986">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,70.1999992225569"
+              EndConnector="0,79.5757567331162"
               Start="0,0"
-              End="0,62.6999992225569">
+              End="0,72.0757567331162">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,62.6999992225569" />
+                    End="0,72.0757567331162" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="390.177258031003,213.593938197915">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,77.2121203859164"
+              Start="0,0"
+              End="0,69.7121203859164">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,69.7121203859164" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2553,14 +4390,123 @@
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Extract Vessel Data to Staging">
+    design-time-name="Package\Extract Tracking CSV Data to Staging">
     <LayoutInfo>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="186.4,41.6"
-          Id="Package\Extract Vessel Data to Staging\OLE DB Vessel Source"
-          TopLeft="292.499984018505,74.5333328150378" />
+          Size="156,41.6"
+          Id="Package\Extract Tracking CSV Data to Staging\Data Conversion"
+          TopLeft="421.666643627817,121.333332489596" />
+        <NodeLayout
+          Size="266.4,41.6"
+          Id="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table"
+          TopLeft="395.99999409914,243.999996364117" />
+        <EdgeLayout
+          Id="Package\Extract Tracking CSV Data to Staging.Paths[Data Conversion Output]"
+          TopLeft="499.666643627817,162.933332489596">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="29.5333504713231,81.0666638745207"
+              Start="0,0"
+              End="29.5333504713231,73.5666638745207">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.5333319372603" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,36.5333319372603"
+                    Point2="0,40.5333319372603"
+                    Point3="4,40.5333319372603" />
+                  <mssgle:LineSegment
+                    End="25.5333504713231,40.5333319372603" />
+                  <mssgle:CubicBezierSegment
+                    Point1="25.5333504713231,40.5333319372603"
+                    Point2="29.5333504713231,40.5333319372603"
+                    Point3="29.5333504713231,44.5333319372603" />
+                  <mssgle:LineSegment
+                    End="29.5333504713231,73.5666638745207" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="217.6,41.6"
+          Id="Package\Extract Tracking CSV Data to Staging\Tracking CSV Flat File Source"
+          TopLeft="176.666657014026,22.5333331766393" />
+        <EdgeLayout
+          Id="Package\Extract Tracking CSV Data to Staging.Paths[Flat File Source Output]"
+          TopLeft="285.466657014026,64.1333331766393">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="214.199986613791,57.199999312957"
+              Start="0,0"
+              End="214.199986613791,49.699999312957">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.5999996564785" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.5999996564785"
+                    Point2="0,28.5999996564785"
+                    Point3="4,28.5999996564785" />
+                  <mssgle:LineSegment
+                    End="210.199986613791,28.5999996564785" />
+                  <mssgle:CubicBezierSegment
+                    Point1="210.199986613791,28.5999996564785"
+                    Point2="214.199986613791,28.5999996564785"
+                    Point3="214.199986613791,32.5999996564785" />
+                  <mssgle:LineSegment
+                    End="214.199986613791,49.699999312957" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <DtsEventHandler
+    design-time-name="Package\Extract Tracking CSV Data to Staging.EventHandlers[OnPreExecute]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="253.6,41.6"
+          Id="Package\Extract Tracking CSV Data to Staging.EventHandlers[OnPreExecute]\Truncate Tracking CSV Staging Table"
+          TopLeft="209.999996870756,59.9999991059303" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Tracking CSV Data to Staging\Load data to Tracking CSV Staging table">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Extract Vessel Data to Staging">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="233.6,41.6"
           Id="Package\Extract Vessel Data to Staging\Load data to Vessel Staging table"
@@ -2569,6 +4515,10 @@
           Size="156,41.6"
           Id="Package\Extract Vessel Data to Staging\Data Conversion"
           TopLeft="311.666649637952,172.466665467355" />
+        <NodeLayout
+          Size="186.4,41.6"
+          Id="Package\Extract Vessel Data to Staging\OLE DB Vessel Source"
+          TopLeft="292.499984018505,74.5333328150378" />
         <EdgeLayout
           Id="Package\Extract Vessel Data to Staging.Paths[OLE DB Source Output]"
           TopLeft="387.683316828228,116.133332815038">
@@ -2628,19 +4578,18 @@
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Extract Vessel Data to Staging\OLE DB Vessel Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
+  <DtsEventHandler
+    design-time-name="Package\Extract Vessel Data to Staging.EventHandlers[OnPreExecute]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="220.8,41.6"
+          Id="Package\Extract Vessel Data to Staging.EventHandlers[OnPreExecute]\Truncate Vessel Staging Table"
+          TopLeft="293.999995619059,47.9999992847442" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
   <PipelineComponentMetadata
     design-time-name="Package\Extract Vessel Data to Staging\Load data to Vessel Staging table">
     <Properties>
@@ -2654,18 +4603,19 @@
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <DtsEventHandler
-    design-time-name="Package\Extract Vessel Data to Staging.EventHandlers[OnPreExecute]">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
-        <NodeLayout
-          Size="220.8,41.6"
-          Id="Package\Extract Vessel Data to Staging.EventHandlers[OnPreExecute]\Truncate Vessel Staging Table"
-          TopLeft="293.999995619059,47.9999992847442" />
-      </GraphLayout>
-    </LayoutInfo>
-  </DtsEventHandler>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Vessel Data to Staging\OLE DB Vessel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Extract VesselTracking to staging">
     <LayoutInfo>
@@ -2674,37 +4624,37 @@
         <NodeLayout
           Size="152,41.6"
           Id="Package\Extract VesselTracking to staging\OLE DB Source"
-          TopLeft="280.999995812774,53.9999991953373" />
+          TopLeft="195.166667169167,47.0666659102175" />
         <NodeLayout
           Size="156,41.6"
           Id="Package\Extract VesselTracking to staging\Data Conversion"
           TopLeft="287.999995708466,146.999997809529" />
         <EdgeLayout
           Id="Package\Extract VesselTracking to staging.Paths[OLE DB Source Output]"
-          TopLeft="356.999995812774,95.5999991953373">
+          TopLeft="271.166667169167,88.6666659102175">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="8.99999989569181,51.399998614192"
+              EndConnector="94.833328539299,58.3333318993115"
               Start="0,0"
-              End="8.99999989569181,43.899998614192">
+              End="94.833328539299,50.8333318993115">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,21.699999307096" />
+                    End="0,25.1666659496557" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,21.699999307096"
-                    Point2="0,25.699999307096"
-                    Point3="4,25.699999307096" />
+                    Point1="0,25.1666659496557"
+                    Point2="0,29.1666659496557"
+                    Point3="4,29.1666659496557" />
                   <mssgle:LineSegment
-                    End="4.99999989569181,25.699999307096" />
+                    End="90.833328539299,29.1666659496557" />
                   <mssgle:CubicBezierSegment
-                    Point1="4.99999989569181,25.699999307096"
-                    Point2="8.99999989569181,25.699999307096"
-                    Point3="8.99999989569181,29.699999307096" />
+                    Point1="90.833328539299,29.1666659496557"
+                    Point2="94.833328539299,29.1666659496557"
+                    Point3="94.833328539299,33.1666659496557" />
                   <mssgle:LineSegment
-                    End="8.99999989569181,43.899998614192" />
+                    End="94.833328539299,50.8333318993115" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2716,33 +4666,33 @@
         <NodeLayout
           Size="270.4,41.6"
           Id="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table"
-          TopLeft="338.999994948506,246.999996319413" />
+          TopLeft="427.999993622303,253.999996215105" />
         <EdgeLayout
           Id="Package\Extract VesselTracking to staging.Paths[Data Conversion Output]"
           TopLeft="365.999995708466,188.599997809529">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="108.199999240041,58.3999985098839"
+              EndConnector="197.199997913837,65.3999984055761"
               Start="0,0"
-              End="108.199999240041,50.8999985098839">
+              End="197.199997913837,57.8999984055761">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.199999254942" />
+                    End="0,28.699999202788" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,25.199999254942"
-                    Point2="0,29.199999254942"
-                    Point3="4,29.199999254942" />
+                    Point1="0,28.699999202788"
+                    Point2="0,32.699999202788"
+                    Point3="4,32.699999202788" />
                   <mssgle:LineSegment
-                    End="104.199999240041,29.199999254942" />
+                    End="193.199997913837,32.699999202788" />
                   <mssgle:CubicBezierSegment
-                    Point1="104.199999240041,29.199999254942"
-                    Point2="108.199999240041,29.199999254942"
-                    Point3="108.199999240041,33.199999254942" />
+                    Point1="193.199997913837,32.699999202788"
+                    Point2="197.199997913837,32.699999202788"
+                    Point3="197.199997913837,36.699999202788" />
                   <mssgle:LineSegment
-                    End="108.199999240041,50.8999985098839" />
+                    End="197.199997913837,57.8999984055761" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2754,6 +4704,18 @@
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <DtsEventHandler
+    design-time-name="Package\Extract VesselTracking to staging.EventHandlers[OnPreExecute]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="260,41.6"
+          Id="Package\Extract VesselTracking to staging.EventHandlers[OnPreExecute]\Truncate VesselTracking Staging Table"
+          TopLeft="321.999995201826,73.9999988973141" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
   <PipelineComponentMetadata
     design-time-name="Package\Extract VesselTracking to staging\OLE DB Source">
     <Properties>
@@ -2767,18 +4729,6 @@
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <DtsEventHandler
-    design-time-name="Package\Extract VesselTracking to staging.EventHandlers[OnPreExecute]">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
-        <NodeLayout
-          Size="260,41.6"
-          Id="Package\Extract VesselTracking to staging.EventHandlers[OnPreExecute]\Truncate VesselTracking Staging Table"
-          TopLeft="321.999995201826,73.9999988973141" />
-      </GraphLayout>
-    </LayoutInfo>
-  </DtsEventHandler>
   <PipelineComponentMetadata
     design-time-name="Package\Extract VesselTracking to staging\Load data to VesselTrackingStaging table">
     <Properties>
