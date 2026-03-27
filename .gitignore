@@ -19,6 +19,8 @@ asset/
 *.ldf
 
 # ── SSIS build output ─────────────────────────────────────────
+*.user
+*.suo
 .vs/
 bin/
 obj/
